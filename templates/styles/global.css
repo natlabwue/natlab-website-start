@@ -8,7 +8,7 @@
   --greyblue-82: rgba(124, 161, 165, 0.82);
   --greyblue-40: rgba(124, 161, 165, 0.4);
   --greyish-brown: #4a4a4a;
-  --underline: #f2600c;
+  --accent: #f2600c;
 }
 
 body {
@@ -56,6 +56,25 @@ h2 {
   color: var(--greyish-brown);
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+}
+
+ul li {
+  list-style: none; 
+}
+
+ul li:before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--accent); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */ 
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
 .main-container {
   max-width: 1076px;
   display: block;
@@ -73,7 +92,7 @@ ul.main-nav {
   list-style:none;
   display: block;
   text-align: center;
-  padding: 0;
+  padding: 12px 0;
 }
 
 ul.main-nav li {
@@ -84,6 +103,10 @@ ul.main-nav li {
   font-size: 15px;
   letter-spacing: -0.47px;
   text-transform: uppercase;
+}
+
+ul.main-nav li:before {
+  content: none;
 }
 
 ul.main-nav li a {
@@ -98,7 +121,7 @@ ul.main-nav li.active a {
 }
 
 ul.main-nav li a:hover {
-  border-bottom: solid 2px var(--underline);
+  border-bottom: solid 2px var(--accent);
 }
 
 .main-slide {
@@ -133,6 +156,15 @@ ul.main-nav li a:hover {
 
 .main-content {
   padding: 20px 10px 74px;
+}
+
+.content-sidebar-wrapper {
+  display: grid;
+  grid-template-columns: auto 230px;
+}
+
+.sidebar {
+  order: 2;
 }
 
 .elm-card {
