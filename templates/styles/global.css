@@ -46,6 +46,24 @@ h1:before {
   border-left: 60px solid #cbd9db;
 }
 
+h1.arrow-down {
+  min-height: 50px;
+  padding: 0;
+}
+
+h1.arrow-down:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 36px;
+  left: 38px;
+  z-index: -1;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-top: 60px solid #cbd9db;
+}
+
 h2 {
   font-size: 22px;
   font-weight: normal;
@@ -76,10 +94,10 @@ ul li:before {
 }
 
 .main-container {
-  max-width: 1076px;
+  max-width: 1000px;
   display: block;
   margin: auto;
-  padding: 0 12px;
+  padding: 0;
 }
 
 .main-logo img {
@@ -167,6 +185,11 @@ ul.main-nav li a:hover {
   order: 2;
 }
 
+.sidebar p {
+  position: relative;
+  z-index: 1;
+}
+
 .elm-card {
   position: relative;
   margin-top: 100px;
@@ -183,14 +206,14 @@ ul.main-nav li a:hover {
 }
 
 .elm-card-title {
-  width: 190px;
+  width: 180px;
   height: 90px;
   background-color: var(--white);
   padding: 70px 15px 0px;
 }
 
 .elm-card-text {
-  width: 215px;
+  width: 200px;
   height: 100px;
   background-color: var(--light-blue-grey);
   padding: 8px 15px 8px;
