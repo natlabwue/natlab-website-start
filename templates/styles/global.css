@@ -8,6 +8,7 @@
   --greyblue-82: rgba(124, 161, 165, 0.82);
   --greyblue-40: rgba(124, 161, 165, 0.4);
   --greyish-brown: #4a4a4a;
+  --underline: #f2600c;
 }
 
 body {
@@ -82,8 +83,22 @@ ul.main-nav li {
   font-family: Verdana;
   font-size: 15px;
   letter-spacing: -0.47px;
-  color: #252525;
   text-transform: uppercase;
+}
+
+ul.main-nav li a {
+  color: #252525;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: transparent 2px;
+}
+
+ul.main-nav li.active a {
+  font-weight: bold;
+}
+
+ul.main-nav li a:hover {
+  border-bottom: solid 2px var(--underline);
 }
 
 .main-slide {
