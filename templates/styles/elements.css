@@ -1,0 +1,34 @@
+.elm-card {
+  position: relative;
+  margin-top: 100px;
+  margin-right: 20px;
+}
+
+.elm-card-img {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  top: -70px;
+  left: 40px;
+  border-radius: 8px;
+}
+
+.elm-card-title {
+  width: 180px;
+  height: 90px;
+  background-color: var(--white);
+  padding: 70px 15px 0px;
+}
+
+.elm-card-text {
+  width: 200px;
+  height: 100px;
+  background-color: var(--light-blue-grey);
+  padding: 8px 15px 8px;
+}
+
+.elm-card-grid-3 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+  
